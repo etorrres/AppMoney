@@ -1,4 +1,4 @@
 package tech.edisystem.appmoney.movimientoslist.entity;
 
-public interface VehiculoDao {
+public interface MovimientoDao {
 }
