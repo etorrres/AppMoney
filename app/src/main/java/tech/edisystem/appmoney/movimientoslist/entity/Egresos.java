@@ -34,6 +34,15 @@ public class Egresos {
     }
 
     @NonNull
+    public Integer getIdEgreso() {
+        return idEgreso;
+    }
+
+    public void setIdEgreso(@NonNull Integer idEgreso) {
+        this.idEgreso = idEgreso;
+    }
+
+    @NonNull
     public String getMontoEgreso() {
         return montoEgreso;
     }

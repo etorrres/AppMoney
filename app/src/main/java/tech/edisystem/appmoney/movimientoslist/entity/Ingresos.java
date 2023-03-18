@@ -32,6 +32,15 @@ public class Ingresos {
     }
 
     @NonNull
+    public Integer getIdIngreso() {
+        return idIngreso;
+    }
+
+    public void setIdIngreso(@NonNull Integer idIngreso) {
+        this.idIngreso = idIngreso;
+    }
+
+    @NonNull
     public String getMontoIngreso() {
         return montoIngreso;
     }
