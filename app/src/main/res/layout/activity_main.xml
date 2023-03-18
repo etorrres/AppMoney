@@ -7,12 +7,57 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/lbl_saldo_actual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hola Mundo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="32dp"
+        android:text="@string/lbl_saldoactual"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btn_movimiento_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/btn_movimientoNew"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_saldo_actual"
+        app:layout_constraintStart_toStartOf="@+id/lbl_saldo_actual"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_saldo_actual" />
+
+    <Button
+        android:id="@+id/btn_movimientos_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_movimientosView"
+        app:layout_constraintEnd_toEndOf="@+id/btn_movimiento_new"
+        app:layout_constraintStart_toStartOf="@+id/btn_movimiento_new"
+        app:layout_constraintTop_toBottomOf="@+id/btn_movimiento_new" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/app_name"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconapp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/lbl_Developers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/lbl_developers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_movimientos_view"
+        app:layout_constraintStart_toStartOf="@+id/btn_movimientos_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

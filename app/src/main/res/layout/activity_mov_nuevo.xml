@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mov_nuevo_Activity">
+
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/lbl_tituloNuevoMov"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_movimientoType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/lbl_tipoMov"
+        app:layout_constraintEnd_toEndOf="@+id/textview_first"
+        app:layout_constraintStart_toStartOf="@+id/textview_first"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+
+    <Spinner
+        android:id="@+id/spi_tipoMovimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:entries="@array/spi_tipoMovimient"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_movimientoType"
+        app:layout_constraintStart_toStartOf="@+id/lbl_movimientoType"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_movimientoType" />
+
+    <TextView
+        android:id="@+id/lbl_monto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/lbl_monto"
+        app:layout_constraintEnd_toEndOf="@+id/spi_tipoMovimiento"
+        app:layout_constraintStart_toStartOf="@+id/spi_tipoMovimiento"
+        app:layout_constraintTop_toBottomOf="@+id/spi_tipoMovimiento" />
+
+    <TextView
+        android:id="@+id/lbl_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/lbl_fecha"
+        app:layout_constraintEnd_toEndOf="@+id/txt_monto"
+        app:layout_constraintStart_toStartOf="@+id/txt_monto"
+        app:layout_constraintTop_toBottomOf="@+id/txt_monto" />
+
+    <TextView
+        android:id="@+id/lbl_motivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/lbl_motivo"
+        app:layout_constraintEnd_toEndOf="@+id/txt_fecha"
+        app:layout_constraintStart_toStartOf="@+id/txt_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fecha" />
+
+    <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/btn_guardar"
+        app:layout_constraintEnd_toEndOf="@+id/txt_motivo"
+        app:layout_constraintStart_toStartOf="@+id/txt_motivo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_motivo" />
+
+    <Button
+        android:id="@+id/btn_cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/btn_cancelar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_guardar"
+        app:layout_constraintStart_toStartOf="@+id/btn_guardar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_guardar" />
+
+    <EditText
+        android:id="@+id/txt_monto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_monto"
+        app:layout_constraintStart_toStartOf="@+id/lbl_monto"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_monto"
+        tools:text="Monto" />
+
+    <EditText
+        android:id="@+id/txt_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_fecha"
+        app:layout_constraintStart_toStartOf="@+id/lbl_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_fecha"
+        tools:text="Fecha" />
+
+    <EditText
+        android:id="@+id/txt_motivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_motivo"
+        app:layout_constraintStart_toStartOf="@+id/lbl_motivo"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_motivo"
+        tools:text="motivo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

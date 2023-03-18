@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">APP Money</string>
+    <string name="lbl_saldoactual">Saldo Actual:</string>
+    <string name="btn_movimientoNew">Nuevo Movimiento</string>
+    <string name="btn_movimientosView">Ver Movimientos</string>
+    <string name="lbl_developers">By. Erick Torres y Edisson Sanchez</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lbl_tituloNuevoMov">Ingrese los datos de su Moviemientos</string>
+    <string name="lbl_tipoMov">Tipo de Movimiento</string>
+    <string name="lbl_monto">Monto</string>
+    <string name="lbl_fecha">Fecha</string>
+    <string name="lbl_motivo">Motivo</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_cancelar">Cancelar</string>
+
+    <string-array name="spi_tipoMovimient">
+        <item>Egreso</item>
+        <item>Ingreso</item>
+    </string-array>
 </resources>
