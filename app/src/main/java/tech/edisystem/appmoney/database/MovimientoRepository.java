@@ -15,19 +15,29 @@ public class MovimientoRepository {
 
     private MovimientoDao movimientoDao;
     private LiveData<List<Ingresos>> ingresoDataset;
-    private LiveData<List<Ingresos>> egresosDataset;
+    private LiveData<List<Egresos>> egresosDataset;
 
     public MovimientoRepository(Application app){
         MovimientosDatabase db = MovimientosDatabase.getDatabase(app);
         movimientoDao = db.movimientoDao();
         ingresoDataset = movimientoDao.mostrarIngresos();
+        egresosDataset = movimientoDao.mostrarEgresos();
     }
 
     public LiveData<List<Ingresos>> getIngresosDataset() {
         return ingresoDataset;
     }
 
+    public LiveData<List<Egresos>> getEgresosDataset() {
+        return egresosDataset;
+    }
+
     public void insert(Ingresos nuevo){
+        MovimientosDatabase.databaseWriteExecutor.execute(() ->{
+            movimientoDao.insert(nuevo);
+        });
+    }
+    public void insert(Egresos nuevo){
         MovimientosDatabase.databaseWriteExecutor.execute(() ->{
             movimientoDao.insert(nuevo);
         });
@@ -38,10 +48,20 @@ public class MovimientoRepository {
             movimientoDao.delete(eliminar);
         });
     }
+    public void delete(Egresos eliminar){
+        MovimientosDatabase.databaseWriteExecutor.execute(() ->{
+            movimientoDao.delete(eliminar);
+        });
+    }
 
     public void deleteAll(){
         MovimientosDatabase.databaseWriteExecutor.execute(() ->{
             movimientoDao.deleteAllIngresos();
+        });
+    }
+    public void deleteAllEgrs(){
+        MovimientosDatabase.databaseWriteExecutor.execute(() ->{
+            movimientoDao.deleteAllEgresos();
         });
     }
 }
