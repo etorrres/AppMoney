@@ -7,13 +7,26 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
-import tech.edisystem.appmoney.databinding.FragmentFirstBinding;
+import java.util.ArrayList;
 
-public class FirstFragment extends Fragment {
+import tech.edisystem.appmoney.OnItemClickListener;
+
+import tech.edisystem.appmoney.adapter.MovimientoViewModel;
+import tech.edisystem.appmoney.databinding.FragmentFirstBinding;
+import tech.edisystem.appmoney.movimientoslist.adapter.MovimientosAdapter;
+
+public class FirstFragment extends Fragment implements OnItemClickListener<Egreso> {
 
     private FragmentFirstBinding binding;
+
+    private MovimientosAdapter adaptador;
+
+    private eMoneyApp app;
+
+    private MovimientoViewModel movimientoViewModel;
 
     @Override
     public View onCreateView(
@@ -22,6 +35,11 @@ public class FirstFragment extends Fragment {
     ) {
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
+        app = eMoneyApp.getInstance();
+        movimientoViewModel = new ViewModelProvider(this).get(MovimientoViewModel.class);
+
+        adaptador = new MovimientosAdapter(new ArrayList<>(), this);
+
         return binding.getRoot();
 
     }
