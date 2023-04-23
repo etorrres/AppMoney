@@ -19,6 +19,7 @@
     <string name="btn_cancelar">Cancelar</string>
     <string name="lbl_iv_warning">Advertencia Movimientos Sin Crear</string>
     <string name="lbl_tv_warning">No hay movimientos creados</string>
+    <string name="lbl_image_tipo">Tipo Movimiento</string>
 
     <string-array name="spi_tipoMovimient">
         <item>Egreso</item>

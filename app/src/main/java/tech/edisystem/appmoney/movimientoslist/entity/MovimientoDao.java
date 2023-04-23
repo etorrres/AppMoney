@@ -18,11 +18,11 @@ public interface MovimientoDao {
     @Update
     void update(Movimiento actualizar);
 
-    @Query("DELETE FROM movimiento_table")
+    @Query("DELETE FROM movimientotable")
     void deleteAllMovimientos();
     @Delete
     void delete(Movimiento eliminar);
-    @Query("SELECT * FROM movimiento_table order by fechaMov asc")
+    @Query("SELECT * FROM movimientotable order by fechaMov asc")
     LiveData<List<Movimiento>> mostrarMovimientos();
 
 
