@@ -39,7 +39,7 @@ public abstract class MovimientosDatabase extends RoomDatabase implements Movimi
                                 MovimientoDao dao = INSTANCE.movimientoDao();
                                 dao.deleteAllMovimientos();
 
-                                Movimiento nuevo = new Movimiento(0.0,"2023/05/05","Compra","45.40, -14.45");
+                                Movimiento nuevo = new Movimiento(0.0,"2023/05/05","Compra", 1,"45.40, -14.45");
                                 dao.insert(nuevo);
                             });
 

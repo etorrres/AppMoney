@@ -1,4 +1,4 @@
-package tech.edisystem.appmoney;
+package tech.edisystem.appmoney.movimientoslist.ui;
 
 import android.os.Bundle;
 
@@ -13,6 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import tech.edisystem.appmoney.R;
 import tech.edisystem.appmoney.databinding.ActivityMovimientonewBinding;
 
 public class movimientoview_Activity extends AppCompatActivity {

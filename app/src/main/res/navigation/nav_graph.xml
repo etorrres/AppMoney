@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="tech.edisystem.appmoney.FirstFragment"
+        android:name="tech.edisystem.appmoney.movimientoslist.ui.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/movimiento_item"/>
 </navigation>

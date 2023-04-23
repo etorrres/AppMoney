@@ -1,4 +1,4 @@
-package tech.edisystem.appmoney;
+package tech.edisystem.appmoney.movimientoslist.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import tech.edisystem.appmoney.databinding.FragmentSecondBinding;
+import tech.edisystem.appmoney.R;
+import tech.edisystem.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
 

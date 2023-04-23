@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".movimientoslist.ui.FirstFragment">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardVehiculo"
+        android:id="@+id/cardMovimiento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -23,7 +23,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/img_tipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="4dp"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/img_tipo"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Monto" />
 
@@ -53,7 +53,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="4dp"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/img_tipo"
                 app:layout_constraintTop_toBottomOf="@+id/iv_monto"
                 tools:text="Tipo Movimiento" />
 
@@ -66,7 +66,7 @@
                 android:layout_marginEnd="4dp"
                 android:paddingBottom="8dp"
                 app:layout_constraintEnd_toEndOf="@+id/iv_movimientotype"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/img_tipo"
                 app:layout_constraintTop_toBottomOf="@+id/iv_movimientotype"
                 tools:text="Fecha" />
 

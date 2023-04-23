@@ -12,15 +12,15 @@
         android:theme="@style/Theme.APPMoney"
         tools:targetApi="31">
         <activity
-            android:name=".mov_nuevo_Activity"
+            android:name=".crearmovimiento.ui.CrearMovimientoActivity"
             android:exported="false" />
         <activity
-            android:name=".movimientoview_Activity"
+            android:name=".movimientoslist.ui.movimientoview_Activity"
             android:exported="false"
-            android:label="@string/title_activity_movimientonew"
+            android:label="@string/app_name"
             android:theme="@style/Theme.APPMoney.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".movimientoslist.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

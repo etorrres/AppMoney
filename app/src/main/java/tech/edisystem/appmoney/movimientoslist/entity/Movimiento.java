@@ -6,9 +6,8 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 
-@Entity(tableName = "movimientos_table")
+@Entity(tableName = "movimiento_table")
 public class Movimiento {
-
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -25,19 +24,25 @@ public class Movimiento {
 
     @NonNull
     @ColumnInfo(name = "motivoMov")
-    private String motivoEgreso;
+    private String motivoMov;
+
+    @NonNull
+    @ColumnInfo(name = "tipoMov")
+    private Integer tipoMov;
 
     @NonNull
     @ColumnInfo(name = "gpsMov")
-    private String gpsMovi;
+    private String gpsMov;
 
-    public Movimiento(@NonNull double montoMov, @NonNull String fechaMov, @NonNull String motivoEgreso, @NonNull String gpsMovi){
+    public Movimiento(@NonNull double montoMov, @NonNull String fechaMov, @NonNull String motivoMov, @NonNull Integer tipoMov, @NonNull String gpsMovi){
         this.montoMov = montoMov;
         this.fechaMov = fechaMov;
-        this.motivoEgreso = motivoEgreso;
-        this.gpsMovi = gpsMovi;
+        this.motivoMov = motivoMov;
+        this.tipoMov = tipoMov;
+        this.gpsMov = gpsMovi;
     }
 
+    @NonNull
     public Integer getIdMovimiento(){return idMovimiento;}
 
     public void setIdMovimiento(@NonNull Integer idMovimiento) {this.idMovimiento = idMovimiento;}
@@ -46,7 +51,29 @@ public class Movimiento {
 
     public String getFechaMov(){return fechaMov = fechaMov;}
 
-    public String getMotivoEgreso() {return motivoEgreso = motivoEgreso;}
+    public String getMotivoMov() {return motivoMov = motivoMov;}
 
-    public String getGpsMovi() {return  gpsMovi = gpsMovi;}
+    public String getGpsMov() {return  gpsMov = gpsMov;}
+
+    public Integer getTipoMov() {return tipoMov = tipoMov;}
+
+    public void setMontoMov(double montoMov) {
+        this.montoMov = montoMov;
+    }
+
+    public void setFechaMov(@NonNull String fechaMov) {
+        this.fechaMov = fechaMov;
+    }
+
+    public void setMotivoMov(@NonNull String motivoMov) {
+        this.motivoMov = motivoMov;
+    }
+
+    public void setTipoMov(@NonNull Integer tipoMov) {
+        this.tipoMov = tipoMov;
+    }
+
+    public void setGpsMov(@NonNull String gpsMov) {
+        this.gpsMov = gpsMov;
+    }
 }

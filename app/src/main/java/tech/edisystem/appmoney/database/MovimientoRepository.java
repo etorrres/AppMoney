@@ -74,6 +74,12 @@ public class MovimientoRepository {
         });
     }
 
+    public void update(Movimiento actualizar){
+        MovimientosDatabase.databaseWriteExecutor.execute(() ->{
+            movimientoDao.update(actualizar);
+        });
+    }
+
     public void delete(Movimiento eliminar){
         MovimientosDatabase.databaseWriteExecutor.execute(() ->{
             movimientoDao.delete(eliminar);

@@ -1,4 +1,4 @@
-package tech.edisystem.appmoney;
+package tech.edisystem.appmoney.movimientoslist.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 

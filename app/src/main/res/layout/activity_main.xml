@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".movimientoslist.ui.MainActivity">
 
     <TextView
         android:id="@+id/lbl_saldo_actual"
@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/lbl_saldoactual"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/img_tipo"
         app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/img_tipo"
+        app:layout_constraintTop_toBottomOf="@+id/img_tipo" />
 
     <Button
         android:id="@+id/btn_movimiento_new"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_movimiento_new" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_tipo"
         android:layout_width="0dp"
         android:layout_height="140dp"
         android:layout_marginTop="24dp"
