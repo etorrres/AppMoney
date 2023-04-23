@@ -10,7 +10,7 @@ import java.util.List;
 
 @Dao
 public interface MovimientoDao {
-
+/*
 @Insert
 void insert(Egresos nuevoEgreso);
 
@@ -30,14 +30,20 @@ void deleteAllIngresos();
 
 @Query("SELECT * FROM egresos_table order by fechaEgreso asc")
 LiveData<List<Egresos>> mostrarEgresos();
+
+
 @Query("SELECT * FROM egresos_table WHERE fechaEgreso = :fechaEgreso")
 LiveData<List<Egresos>> mostrarEgresoFecha(String fechaEgreso);
+*/
+    @Insert
+    void insert(Movimiento nuevo);
 
-@Query("SELECT * FROM ingresos_table order by fechaIngreso asc")
-LiveData<List<Ingresos>> mostrarIngresos();
-@Query("SELECT * FROM ingresos_table WHERE fechaIngreso = :fechaIngreso")
-LiveData<List<Ingresos>> mostrarIngresoFecha(String fechaIngreso);
-
+    @Query("DELETE FROM movimientos_table")
+    void deleteAllMovimientos();
+    @Delete
+    void delete(Movimiento eliminar);
+    @Query("SELECT * FROM movimientos_table order by fechaMov asc")
+    LiveData<List<Movimiento>> mostrarMovimientos();
 
 
 }

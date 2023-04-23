@@ -10,12 +10,14 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/*
 import tech.edisystem.appmoney.movimientoslist.entity.Egresos;
 import tech.edisystem.appmoney.movimientoslist.entity.Ingresos;
+*/
+import tech.edisystem.appmoney.movimientoslist.entity.Movimiento;
 import tech.edisystem.appmoney.movimientoslist.entity.MovimientoDao;
 
-@Database(entities = {Egresos.class, Ingresos.class}, version = 1, exportSchema = false)
+@Database(entities = Movimiento.class, version = 1, exportSchema = false)
 public abstract class MovimientosDatabase extends RoomDatabase implements MovimientoDao {
     public abstract MovimientoDao movimientoDao();
 
@@ -35,9 +37,9 @@ public abstract class MovimientosDatabase extends RoomDatabase implements Movimi
                             super.onCreate(db);
                             databaseWriteExecutor.execute(() -> {
                                 MovimientoDao dao = INSTANCE.movimientoDao();
-                                dao.deleteAllIngresos();
+                                dao.deleteAllMovimientos();
 
-                                Ingresos nuevo = new Ingresos("100", "17/03/2023", "Ahorro");
+                                Movimiento nuevo = new Movimiento(0.0,"2023/05/05","Compra","45.40, -14.45");
                                 dao.insert(nuevo);
                             });
 

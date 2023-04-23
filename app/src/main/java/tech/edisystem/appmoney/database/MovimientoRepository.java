@@ -7,23 +7,22 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import tech.edisystem.appmoney.movimientoslist.entity.Egresos;
-import tech.edisystem.appmoney.movimientoslist.entity.Ingresos;
+import tech.edisystem.appmoney.movimientoslist.entity.Movimiento;
 import tech.edisystem.appmoney.movimientoslist.entity.MovimientoDao;
 
 public class MovimientoRepository {
 
     private MovimientoDao movimientoDao;
-    private LiveData<List<Ingresos>> ingresoDataset;
-    private LiveData<List<Egresos>> egresosDataset;
+    private LiveData<List<Movimiento>> movimientosDataset;
+    //private LiveData<List<Egresos>> egresosDataset;
 
     public MovimientoRepository(Application app){
         MovimientosDatabase db = MovimientosDatabase.getDatabase(app);
         movimientoDao = db.movimientoDao();
-        ingresoDataset = movimientoDao.mostrarIngresos();
-        egresosDataset = movimientoDao.mostrarEgresos();
-    }
+        movimientosDataset = movimientoDao.mostrarMovimientos();
 
+    }
+/*
     public LiveData<List<Ingresos>> getIngresosDataset() {
         return ingresoDataset;
     }
@@ -62,6 +61,28 @@ public class MovimientoRepository {
     public void deleteAllEgrs(){
         MovimientosDatabase.databaseWriteExecutor.execute(() ->{
             movimientoDao.deleteAllEgresos();
+        });
+    }
+
+ */
+    public LiveData<List<Movimiento>> getMovimientosDataset() {
+        return movimientosDataset;
+    }
+    public void insert(Movimiento nuevo){
+        MovimientosDatabase.databaseWriteExecutor.execute(() ->{
+            movimientoDao.insert(nuevo);
+        });
+    }
+
+    public void delete(Movimiento eliminar){
+        MovimientosDatabase.databaseWriteExecutor.execute(() ->{
+            movimientoDao.delete(eliminar);
+        });
+    }
+
+    public void deleteAll(){
+        MovimientosDatabase.databaseWriteExecutor.execute(() ->{
+            movimientoDao.deleteAllMovimientos();
         });
     }
 }
