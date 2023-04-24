@@ -17,6 +17,7 @@
     <string name="lbl_motivo">Motivo</string>
     <string name="btn_guardar">Guardar</string>
     <string name="btn_cancelar">Cancelar</string>
+    <string name="tvLocatio">TextView</string>
 
     <string-array name="spi_tipoMovimient">
         <item>Egreso</item>
