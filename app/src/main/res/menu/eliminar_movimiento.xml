@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/action_delete_vehicle"
+    <item android:id="@+id/action_delete_movimiento"
         android:icon="@drawable/baseline_delete_forever_24"
         android:title="@string/lbl_menu_eliminar_movimiento"
         app:showAsAction="always"

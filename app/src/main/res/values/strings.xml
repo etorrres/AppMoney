@@ -31,6 +31,11 @@
     <string name="ok">Si</string>
     <string name="mensaje_eliminar_todo">Todos los movimientos se han eliminado</string>
     <string name="cancel">Cancelar</string>
+    <string name="title_update_move">Actualizar Movimiento</string>
+    <string name="btn_crear_movimiento">Crear Movimiento\n</string>
+    <string name="title_new_move">Nuevo Movimiento</string>
+    <string name="delete_dialog_message">¿Desea eliminar el movimiento Selecionado?</string>
+    <string name="mensaje_eliminacion_mov">Movimiento Eliminado\n</string>
     <string-array name="spi_tipoMovimient">
         <item>Egreso</item>
         <item>Ingreso</item>

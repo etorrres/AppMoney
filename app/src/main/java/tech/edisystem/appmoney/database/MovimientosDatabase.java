@@ -10,10 +10,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-/*
-import tech.edisystem.appmoney.movimientoslist.entity.Egresos;
-import tech.edisystem.appmoney.movimientoslist.entity.Ingresos;
-*/
+
 import tech.edisystem.appmoney.movimientoslist.entity.Movimiento;
 import tech.edisystem.appmoney.movimientoslist.entity.MovimientoDao;
 
@@ -26,7 +23,6 @@ public abstract class MovimientosDatabase extends RoomDatabase implements Movimi
     private static final int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
-    //GENERADOR DE INSTANCIA USANDO PATRÓN SINGLETON
     static MovimientosDatabase getDatabase(final Context context){
         if(INSTANCE == null){
             synchronized (MovimientosDatabase.class){

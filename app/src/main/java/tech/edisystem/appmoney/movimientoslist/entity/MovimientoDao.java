@@ -25,5 +25,4 @@ public interface MovimientoDao {
     @Query("SELECT * FROM movimiento_table order by fechaMov asc")
     LiveData<List<Movimiento>> mostrarMovimientos();
 
-
 }

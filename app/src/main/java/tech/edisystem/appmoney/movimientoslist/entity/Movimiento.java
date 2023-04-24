@@ -28,13 +28,13 @@ public class Movimiento {
 
     @NonNull
     @ColumnInfo(name = "tipoMov")
-    private Integer tipoMov;
+    private int tipoMov;
 
     @NonNull
     @ColumnInfo(name = "gpsMov")
     private String gpsMov;
 
-    public Movimiento(@NonNull double montoMov, @NonNull String fechaMov, @NonNull String motivoMov, @NonNull Integer tipoMov, @NonNull String gpsMovi){
+    public Movimiento(@NonNull double montoMov, @NonNull String fechaMov, @NonNull String motivoMov, @NonNull int tipoMov, @NonNull String gpsMovi){
         this.montoMov = montoMov;
         this.fechaMov = fechaMov;
         this.motivoMov = motivoMov;
@@ -55,6 +55,27 @@ public class Movimiento {
 
     public String getGpsMov() {return  gpsMov = gpsMov;}
 
-    public Integer getTipoMov() {return tipoMov = tipoMov;}
+    public int getTipoMov() {
+        return tipoMov;
+    }
 
+    public void setMontoMov(double montoMov) {
+        this.montoMov = montoMov;
+    }
+
+    public void setFechaMov(@NonNull String fechaMov) {
+        this.fechaMov = fechaMov;
+    }
+
+    public void setMotivoMov(@NonNull String motivoMov) {
+        this.motivoMov = motivoMov;
+    }
+
+    public void setTipoMov(@NonNull Integer tipoMov) {
+        this.tipoMov = tipoMov;
+    }
+
+    public void setGpsMov(@NonNull String gpsMov) {
+        this.gpsMov = gpsMov;
+    }
 }
