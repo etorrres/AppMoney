@@ -17,6 +17,7 @@
     <string name="lbl_motivo">Motivo</string>
     <string name="btn_guardar">Guardar</string>
     <string name="btn_cancelar">Cancelar</string>
+    <string name="tvLocatio">TextView</string>
 
     <string name="mensaje_creacion_movimiento">Movimiento %1$s Creado</string>
     <string name="lbl_iv_warning">Advertencia Movimientos no creados</string>
