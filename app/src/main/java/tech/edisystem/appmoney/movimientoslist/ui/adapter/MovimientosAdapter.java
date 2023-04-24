@@ -36,7 +36,7 @@ public class MovimientosAdapter extends RecyclerView.Adapter<MovimientosAdapter.
     @Override
     public void onBindViewHolder(@NonNull MovimientosAdapter.ViewHolder holder, int position) {
         Movimiento movimientoShow = dataset.get(position);
-        holder.binding.ivMonto.setText(Double.toString(movimientoShow.getMontoMov());
+        holder.binding.ivMonto.setText(Double.toString(movimientoShow.getMontoMov()));
         holder.binding.ivFecha.setText(movimientoShow.getFechaMov());
         if(movimientoShow.getTipoMov() == 1){
             holder.binding.imgTipo.setImageResource(R.drawable.ic_ingreso_24);

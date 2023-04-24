@@ -6,7 +6,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 
-@Entity(tableName = "movimientotable")
+@Entity(tableName = "movimiento_table")
 public class Movimiento {
 
     @PrimaryKey(autoGenerate = true)

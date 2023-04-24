@@ -17,7 +17,7 @@ import tech.edisystem.appmoney.movimientoslist.entity.Ingresos;
 import tech.edisystem.appmoney.movimientoslist.entity.Movimiento;
 import tech.edisystem.appmoney.movimientoslist.entity.MovimientoDao;
 
-@Database(entities = Movimiento.class, version = 1, exportSchema = false)
+@Database(entities = {Movimiento.class}, version = 1, exportSchema = false)
 public abstract class MovimientosDatabase extends RoomDatabase implements MovimientoDao {
     public abstract MovimientoDao movimientoDao();
 
