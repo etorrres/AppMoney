@@ -10,7 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import tech.edisystem.appmoney.R;
-import tech.edisystem.databinding.FragmentSecondBinding;
+import tech.edisystem.appmoney.databinding.FragmentSecondBinding;
+
 
 public class SecondFragment extends Fragment {
 
