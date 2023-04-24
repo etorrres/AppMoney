@@ -57,23 +57,4 @@ public class Movimiento {
 
     public Integer getTipoMov() {return tipoMov = tipoMov;}
 
-    public void setMontoMov(double montoMov) {
-        this.montoMov = montoMov;
-    }
-
-    public void setFechaMov(@NonNull String fechaMov) {
-        this.fechaMov = fechaMov;
-    }
-
-    public void setMotivoMov(@NonNull String motivoMov) {
-        this.motivoMov = motivoMov;
-    }
-
-    public void setTipoMov(@NonNull Integer tipoMov) {
-        this.tipoMov = tipoMov;
-    }
-
-    public void setGpsMov(@NonNull String gpsMov) {
-        this.gpsMov = gpsMov;
-    }
 }

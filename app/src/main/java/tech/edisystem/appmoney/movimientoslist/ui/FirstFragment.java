@@ -45,6 +45,7 @@ public class FirstFragment extends Fragment implements OnItemClickListener<Movim
 
         movimientoViewModel.getMovimientoDataset().observe(this, movimientos -> {
                 adaptador.setItems(movimientos);
+                validarDataset();
         });
 
         setupReciclerView();

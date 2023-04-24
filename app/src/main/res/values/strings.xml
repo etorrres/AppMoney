@@ -5,10 +5,10 @@
     <string name="btn_movimientosView">Ver Movimientos</string>
     <string name="lbl_developers">By. Erick Torres y Edisson Sanchez</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label">Movimientos</string>
+    <string name="second_fragment_label">App Money</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
 
     <string name="lbl_tituloNuevoMov">Ingrese los datos de su Moviemientos</string>
     <string name="lbl_tipoMov">Tipo de Movimiento</string>
@@ -18,6 +18,18 @@
     <string name="btn_guardar">Guardar</string>
     <string name="btn_cancelar">Cancelar</string>
 
+    <string name="mensaje_creacion_movimiento">Movimiento %1$s Creado</string>
+    <string name="lbl_iv_warning">Advertencia Movimientos no creados</string>
+    <string name="lbl_tv_warning">No hay movimiento creados</string>
+    <string name="btn_gps">Ubicacion</string>
+    <string name="lbl_image_tipo">Tipo Movimiento</string>
+    <string name="action_delete_all">Borrar Todo</string>
+    <string name="lbl_menu_eliminar_movimiento">Eliminar Movimiento</string>
+    <string name="delete_all_dialog_message">¿Esta Seguro de Eliminar todos los Movimientos?</string>
+    <string name="delete_dialog_title">Confirmar Accion</string>
+    <string name="ok">Si</string>
+    <string name="mensaje_eliminar_todo">Todos los movimientos se han eliminado</string>
+    <string name="cancel">Cancelar</string>
     <string-array name="spi_tipoMovimient">
         <item>Egreso</item>
         <item>Ingreso</item>

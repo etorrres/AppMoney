@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".crearmovimiento.ui.CrearMovimientoActivity">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/lbl_tituloNuevoMov"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,9 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/lbl_tipoMov"
-        app:layout_constraintEnd_toEndOf="@+id/textview_first"
-        app:layout_constraintStart_toStartOf="@+id/textview_first"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="144dp" />
 
     <Spinner
         android:id="@+id/spi_tipoMovimiento"
@@ -72,19 +72,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/btn_guardar"
-        app:layout_constraintEnd_toEndOf="@+id/txt_motivo"
-        app:layout_constraintStart_toStartOf="@+id/txt_motivo"
-        app:layout_constraintTop_toBottomOf="@+id/txt_motivo" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_gps"
+        app:layout_constraintStart_toStartOf="@+id/btn_gps"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gps" />
 
     <Button
-        android:id="@+id/btn_cancelar"
+        android:id="@+id/btn_gps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/btn_cancelar"
-        app:layout_constraintEnd_toEndOf="@+id/btn_guardar"
-        app:layout_constraintStart_toStartOf="@+id/btn_guardar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_guardar" />
+        android:text="@string/btn_gps"
+        app:layout_constraintEnd_toEndOf="@+id/txt_motivo"
+        app:layout_constraintStart_toStartOf="@+id/txt_motivo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_motivo" />
 
     <EditText
         android:id="@+id/txt_monto"

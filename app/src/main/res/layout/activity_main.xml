@@ -1,63 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".movimientoslist.ui.MainActivity">
+    tools:context=".movimientoslist.ui.MainActivity"
+    android:id="@+id/clMainLayout">
 
-    <TextView
-        android:id="@+id/lbl_saldo_actual"
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/lbl_saldoactual"
-        app:layout_constraintEnd_toEndOf="@+id/img_tipo"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="@+id/img_tipo"
-        app:layout_constraintTop_toBottomOf="@+id/img_tipo" />
+        android:theme="@style/Theme.APPMoney.AppBarOverlay">
 
-    <Button
-        android:id="@+id/btn_movimiento_new"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/btn_movimientoNew"
-        app:layout_constraintEnd_toEndOf="@+id/lbl_saldo_actual"
-        app:layout_constraintStart_toStartOf="@+id/lbl_saldo_actual"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_saldo_actual" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.APPMoney.PopupOverlay" />
 
-    <Button
-        android:id="@+id/btn_movimientos_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/btn_movimientosView"
-        app:layout_constraintEnd_toEndOf="@+id/btn_movimiento_new"
-        app:layout_constraintStart_toStartOf="@+id/btn_movimiento_new"
-        app:layout_constraintTop_toBottomOf="@+id/btn_movimiento_new" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <ImageView
-        android:id="@+id/img_tipo"
-        android:layout_width="0dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/app_name"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iconapp"
-        tools:ignore="MissingConstraints" />
+    <include layout="@layout/content_movimientoview" />
+    <!--
+       <TextView
+           android:id="@+id/lbl_saldo_actual"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="32dp"
+           android:text="@string/lbl_saldoactual"
+           app:layout_constraintEnd_toEndOf="@+id/img_tipo"
+           app:layout_constraintHorizontal_bias="0.512"
+           app:layout_constraintStart_toStartOf="@+id/img_tipo"
+           app:layout_constraintTop_toBottomOf="@+id/img_tipo" />
 
-    <TextView
-        android:id="@+id/lbl_Developers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="@string/lbl_developers"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_movimientos_view"
-        app:layout_constraintStart_toStartOf="@+id/btn_movimientos_view" />
+       <Button
+           android:id="@+id/btn_movimiento_new"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="24dp"
+           android:text="@string/btn_movimientoNew"
+           app:layout_constraintEnd_toEndOf="@+id/lbl_saldo_actual"
+           app:layout_constraintStart_toStartOf="@+id/lbl_saldo_actual"
+           app:layout_constraintTop_toBottomOf="@+id/lbl_saldo_actual" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+       <Button
+           android:id="@+id/btn_movimientos_view"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:text="@string/btn_movimientosView"
+           app:layout_constraintEnd_toEndOf="@+id/btn_movimiento_new"
+           app:layout_constraintStart_toStartOf="@+id/btn_movimiento_new"
+           app:layout_constraintTop_toBottomOf="@+id/btn_movimiento_new" />
+
+       <ImageView
+           android:id="@+id/img_tipo"
+           android:layout_width="0dp"
+           android:layout_height="140dp"
+           android:layout_marginTop="24dp"
+           android:contentDescription="@string/app_name"
+           android:visibility="visible"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:srcCompat="@drawable/iconapp"
+           tools:ignore="MissingConstraints" />
+
+       <TextView
+           android:id="@+id/lbl_Developers"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="24dp"
+           android:text="@string/lbl_developers"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="@+id/btn_movimientos_view"
+           app:layout_constraintStart_toStartOf="@+id/btn_movimientos_view" />
+        -->
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/fab"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="bottom|end"
+           android:layout_marginEnd="16dp"
+           android:layout_marginBottom="16dp"
+           app:srcCompat="@drawable/baseline_add_48" />
+
+   </androidx.coordinatorlayout.widget.CoordinatorLayout>

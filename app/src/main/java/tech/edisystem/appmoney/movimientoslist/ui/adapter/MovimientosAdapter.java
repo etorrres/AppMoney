@@ -74,6 +74,5 @@ public class MovimientosAdapter extends RecyclerView.Adapter<MovimientosAdapter.
         public void setOnClickListener(final Movimiento movimientoSelect, final OnItemClickListener<Movimiento> listener){
             this.binding.cardMovimiento.setOnClickListener(v-> listener.onItemClick(movimientoSelect,1));
         }
-
     }
 }
